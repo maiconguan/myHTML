@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: auto; background-color: #f0f2f5; padding: 10px; }
+        /* Style cho Chương (Cha) */
+        .chapter-wrapper { margin-bottom: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: #fff; overflow: hidden; }
+        .chapter-header { background: #1a73e8; color: white; padding: 18px; cursor: pointer; font-weight: bold; font-size: 1.2em; display: flex; justify-content: space-between; align-items: center; }
+        .chapter-header2 { background: #731Ae8; color: white; padding: 18px; cursor: pointer; font-weight: bold; font-size: 1.2em; display: flex; justify-content: space-between; align-items: center; }
+        .chapter-content { display: none; padding: 10px; background: #eef2f7; }
+
+        /* Style cho Bài (Con) */
+        .lesson-wrapper { margin-bottom: 8px; border-radius: 6px; border: 1px solid #d1d9e6; background: #fff; }
+        .lesson-header { padding: 12px 15px; cursor: pointer; font-weight: 600; color: #1a73e8; display: flex; justify-content: space-between; align-items: center; background: #f8f9fa; }
+        .lesson-content { display: none; padding: 20px; border-top: 1px solid #eee; }
+
+        /* Nội dung chi tiết */
+        h4 { color: #d93025; border-left: 4px solid #d93025; padding-left: 10px; margin: 20px 0 10px; }
+        .formula-box { background: #fff4e5; border: 1px solid #ffe2b3; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .formula-box ul { margin: 0; padding-left: 20px; }
+        .formula-box li { margin-bottom: 8px; font-weight: 500; }
+        .mindmap { text-align: center; margin: 15px 0; }
+        .mindmap img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #ddd; cursor: zoom-in; }
+
+        /* Hiệu ứng mũi tên */
+        .arrow { transition: transform 0.3s; font-size: 0.8em; }
+        .active .arrow { transform: rotate(180deg); }
+        .show { display: block; }
+
+
+        /* Khung bao ngoài cho danh sách video */
+        .video-list-wrapper {
+            margin-top: 20px;
+        }
+
+        /* Từng mục video riêng biệt */
+        .video-item {
+            margin-bottom: 30px; /* Tạo khoảng cách 30px giữa các video */
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #1a73e8; /* Tạo điểm nhấn bên lề */
+        }
+
+        /* CSS chuẩn cho khung video (giữ nguyên cái cũ hoặc dùng cái này) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center; color: #1a73e8; text-transform: uppercase;">Hệ Thống Lý Thuyết Toán 8 - Chân Trời Sáng Tạo</h2>
+
+<div class="chapter-wrapper">
+    <div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 1: ĐA THỨC VÀ PHÂN THỨC ĐẠI SỐ <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Đơn thức và đa thức nhiều biến <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-1-don-thuc-va-da-thuc-nhieu-bien.png" alt="Sơ đồ tư duy Bài 1 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Đơn thức:</b> Là biểu thức đại số chỉ gồm một số, hoặc một biến, hoặc một tích giữa các số và các biến.</li>
+                        <li><b>Đơn thức thu gọn:</b> Là đơn thức chỉ gồm tích của một số với các biến mà mỗi biến đã được nâng lên lũy thừa với số mũ nguyên dương.</li>
+                        <li><b>Đa thức:</b> Là một tổng của những đơn thức. Mỗi đơn thức trong tổng gọi là một hạng tử của đa thức đó.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Các phép toán với đa thức nhiều biến <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-2.png" alt="Sơ đồ tư duy Bài 2 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Cộng, trừ đa thức:</b> Nhóm các hạng tử đồng dạng rồi thu gọn.</li>
+                        <li><b>Nhân đơn thức với đa thức:</b> Nhân đơn thức với từng hạng tử của đa thức rồi cộng các tích với nhau: <b>A(B + C) = AB + AC</b>.</li>
+                        <li><b>Nhân đa thức với đa thức:</b> Nhân mỗi hạng tử của đa thức này với từng hạng tử của đa thức kia rồi cộng các tích với nhau.</li>
+                        <li><b>Chia đa thức cho đơn thức:</b> Chia từng hạng tử của đa thức cho đơn thức (nếu tất cả đều chia hết) rồi cộng các kết quả.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Hằng đẳng thức đáng nhớ <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-3-hang-dang-thuc-dang-nho.png" alt="Sơ đồ tư duy Bài 3 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>7 Hằng đẳng thức cốt lõi:</b></p>
+                    <ol>
+                        <li>(A + B)² = A² + 2AB + B²</li>
+                        <li>(A - B)² = A² - 2AB + B²</li>
+                        <li>A² - B² = (A - B)(A + B)</li>
+                        <li>(A + B)³ = A³ + 3A²B + 3AB² + B³</li>
+                        <li>(A - B)³ = A³ - 3A²B + 3AB² - B³</li>
+                        <li>A³ + B³ = (A + B)(A² - AB + B²)</li>
+                        <li>A³ - B³ = (A - B)(A² + AB + B²)</li>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 4: Phân tích đa thức thành nhân tử <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-4-phan-tich-da-thuc-thanh-nhan-tu.png" alt="Sơ đồ tư duy Bài 4 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>Các phương pháp chính:</b></p>
+                    <ul>
+                        <li><b>Đặt nhân tử chung:</b> Tìm phần chung của các hạng tử để đưa ra ngoài dấu ngoặc.</li>
+                        <li><b>Dùng hằng đẳng thức:</b> Biến đổi đa thức về dạng vế trái hoặc vế phải của các hằng đẳng thức.</li>
+                        <li><b>Nhóm hạng tử:</b> Kết hợp các hạng tử một cách thích hợp để xuất hiện nhân tử chung hoặc hằng đẳng thức.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 5: Phân thức đại số <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-5-phan-thuc-dai-so.png" alt="Sơ đồ tư duy Bài 5 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Một phân thức đại số là một biểu thức có dạng <b>A/B</b>, trong đó <b>A, B</b> là những đa thức và <b>B</b> khác đa thức 0.</li>
+                        <li><b>Hai phân thức bằng nhau:</b> A/B = C/D nếu <b>A.D = B.C</b>.</li>
+                        <li><b>Tính chất cơ bản:</b> Có thể nhân hoặc chia cả tử và mẫu của một phân thức với cùng một đa thức khác 0 để được phân thức mới bằng phân thức đã cho.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 6: Cộng, trừ phân thức <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b6-cong-tru-phan-thuc.png" alt="Sơ đồ tư duy Bài 6 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Cùng mẫu:</b> Cộng (hoặc trừ) các tử thức với nhau và giữ nguyên mẫu thức.</li>
+                        <li><b>Khác mẫu:</b> 
+                            <br>1. Quy đồng mẫu thức (tìm mẫu thức chung).
+                            <br>2. Cộng (hoặc trừ) các phân thức có cùng mẫu thức vừa tìm được.
+                        </li>
+                        <li><b>Quy tắc đổi dấu:</b> A/B = -A/(-B).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 7: Nhân, chia phân thức <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/b-7-nhan-chia-phan-thuc.png" alt="Sơ đồ tư duy Bài 7 Chương 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Nhân phân thức:</b> Nhân tử với tử, mẫu với mẫu: <b>(A/B) . (C/D) = (A.C) / (B.D)</b>.</li>
+                        <li><b>Phân thức nghịch đảo:</b> Phân thức nghịch đảo của A/B (với A, B khác 0) là B/A.</li>
+                        <li><b>Chia phân thức:</b> Nhân phân thức thứ nhất với phân thức nghịch đảo của phân thức thứ hai: <b>(A/B) : (C/D) = (A/B) . (D/C)</b>.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 2: CÁC HÌNH KHỐI TRONG THỰC TIỄN <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Hình chóp tam giác đều - Hình chóp tứ giác đều <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/c2-b1-hinh-chop-tam-giac-deu-hinh-chop-tu-giac-deu.png" alt="Sơ đồ tư duy Bài 1 Chương 2">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>1. Hình chóp tam giác đều:</b></p>
+                    <ul>
+                        <li>Mặt đáy là một tam giác đều.</li>
+                        <li>3 mặt bên là các tam giác cân bằng nhau có chung đỉnh.</li>
+                        <li>Chân đường cao trùng với tâm của đường tròn ngoại tiếp tam giác đáy.</li>
+                    </ul>
+                    
+                    <p><b>2. Hình chóp tứ giác đều:</b></p>
+                    <ul>
+                        <li>Mặt đáy là một hình vuông.</li>
+                        <li>4 mặt bên là các tam giác cân bằng nhau có chung đỉnh.</li>
+                        <li>Độ dài đoạn thẳng nối đỉnh với trung điểm của một cạnh đáy gọi là <b>trung đoạn</b>.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Diện tích xung quanh và thể tích <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/c2-b2-dien-tich-xung-quanh-va-the-tich-cua-hinh-chop-tam-giac-deu-hinh-chop-tu-giac-deu.png" alt="Sơ đồ tư duy Bài 2 Chương 2">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>1. Diện tích xung quanh (S_xq):</b> Bằng tích của nửa chu vi đáy với trung đoạn.</p>
+                    <div style="text-align: center; background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ffccbc; color: #d93025; font-weight: bold;">
+                        S_xq = p . d
+                    </div>
+                    <p><i>(Trong đó: p là nửa chu vi đáy, d là trung đoạn)</i></p>
+                    
+                    
+                    <p><b>2. Thể tích (V):</b> Bằng một phần ba tích của diện tích đáy với chiều cao.</p>
+                    <div style="text-align: center; background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ffccbc; color: #d93025; font-weight: bold;">
+                        V = 1/3 . S . h
+                    </div>
+                    <p><i>(Trong đó: S là diện tích đáy, h là chiều cao)</i></p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 3: ĐỊNH LÍ PYTHAGORE VÀ CÁC LOẠI TỨ GIÁC <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Định lí Pythagore <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0531/c3-b1-dinh-li-pythagore.png" alt="Sơ đồ tư duy Bài 1 Chương 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định lí Pythagore:</b> Trong một tam giác vuông, bình phương của cạnh huyền bằng tổng các bình phương của hai cạnh góc vuông.</li>
+                        <li style="list-style: none; text-align: center; color: #d93025; font-size: 1.1em; margin: 10px 0;">
+                            <b>BC² = AB² + AC²</b> (với ΔABC vuông tại A)
+                        </li>
+                        
+                        <li><b>Định lí Pythagore đảo:</b> Nếu một tam giác có bình phương của một cạnh bằng tổng các bình phương của hai cạnh kia thì tam giác đó là tam giác vuông.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Tứ giác <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c5-b2-tu-giac.png" alt="Sơ đồ tư duy Bài 2 Chương 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Tứ giác lồi là tứ giác luôn nằm về một phía của đường thẳng chứa bất kì cạnh nào của tứ giác đó.</li>
+                        <li><b>Định lí về tổng các góc:</b> Tổng các góc của một tứ giác bằng 360°.</li>
+                        <li style="list-style: none; text-align: center; font-weight: bold; border: 1px dashed #1a73e8; padding: 5px;">
+                            Góc A + Góc B + Góc C + Góc D = 360°
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Hình thang - Hình thang cân <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c3-b3hinh-thang-can.png" alt="Sơ đồ tư duy Bài 3 Chương 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Hình thang:</b> Là tứ giác có hai cạnh đối song song.</li>
+                        <li><b>Hình thang cân:</b> Là hình thang có hai góc kề một đáy bằng nhau.</li>
+                        <li><b>Tính chất hình thang cân:</b>
+                            <br>- Hai cạnh bên bằng nhau.
+                            <br>- Hai đường chéo bằng nhau.
+                        </li>
+                        <li><b>Dấu hiệu nhận biết:</b> Hình thang có hai đường chéo bằng nhau là hình thang cân.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 4: Hình bình hành - Hình thoi <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c3-b4-hinh-binh-hanh-hinh-thoi.png" alt="Sơ đồ tư duy Bài 4 Chương 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>Hình bình hành:</b> Tứ giác có các cặp cạnh đối song song.</p>
+                    <ul>
+                        <li>Tính chất: Cạnh đối bằng nhau, góc đối bằng nhau, đường chéo cắt nhau tại trung điểm.</li>
+                    </ul>
+                    
+                    <p><b>Hình thoi:</b> Tứ giác có bốn cạnh bằng nhau.</p>
+                    <ul>
+                        <li>Tính chất: Có tất cả tính chất hình bình hành; hai đường chéo vuông góc và là đường phân giác của các góc.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 5: Hình chữ nhật - Hình vuông <span class="arrow">▼</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c3-b5-hinh-chu-nhat-hinh-vuong.png" alt="Sơ đồ tư duy Bài 5 Chương 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>Hình chữ nhật:</b> Tứ giác có bốn góc vuông.</p>
+                    <ul>
+                        <li>Tính chất: Hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.</li>
+                    </ul>
+                    
+                    <p><b>Hình vuông:</b> Tứ giác có bốn góc vuông và bốn cạnh bằng nhau.</p>
+                    <ul>
+                        <li>Tính chất: Hình vuông là hình vừa là hình chữ nhật, vừa là hình thoi.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 4: MỘT SỐ YẾU TỐ THỐNG KÊ <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Thu thập và phân loại dữ liệu <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c4-b1-thu-thap-va-phan-loai-du-lieu.png" alt="Sơ đồ tư duy Bài 1 Chương 4">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Thu thập dữ liệu:</b> Có nhiều cách như quan sát, làm thí nghiệm, lập phiếu hỏi (phỏng vấn, bảng câu hỏi) hoặc thu thập từ các nguồn có sẵn (sách báo, internet).</li>
+                        <li><b>Phân loại dữ liệu:</b>
+                            <br>- <b>Dữ liệu định tính:</b> Biểu thị bằng từ ngữ, hình ảnh, ký hiệu (Ví dụ: Màu sắc, tên gọi, mức độ hài lòng).
+                            <br>- <b>Dữ liệu định lượng (Số liệu):</b> Biểu thị bằng số (Ví dụ: Chiều cao, điểm số, dân số).
+                        </li>
+                        <li><b>Dữ liệu rời rạc và dữ liệu liên tục:</b> Số liệu có thể là rời rạc (đếm được như số người) hoặc liên tục (đo lường được như thời gian, nhiệt độ).</li>
+                        <li><b>Tính đại diện của dữ liệu:</b> Để có kết luận tin cậy, dữ liệu cần thu thập trên phạm vi đủ lớn và có tính đại diện cho toàn bộ đối tượng nghiên cứu.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Lựa chọn dạng biểu đồ để biểu diễn dữ liệu <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://tailieumoi.vn/storage/uploads/images/1/c4-b2-lua-chon-dang-bieu-do-de-bieu-dien-du-lieu-1687416897.png" alt="Sơ đồ tư duy Bài 2 Chương 4">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>Các dạng biểu đồ thông dụng và mục đích sử dụng:</b></p>
+                    <ul>
+                        <li><b>Biểu đồ cột (Cột đơn, cột kép):</b> Dùng để so sánh các đại lượng cùng loại.</li>
+                        
+                        <li><b>Biểu đồ hình quạt tròn:</b> Dùng để biểu thị tỉ lệ phần trăm của từng loại số liệu so với toàn thể.</li>
+                        
+                        <li><b>Biểu đồ đoạn thẳng:</b> Dùng để biểu diễn sự thay đổi của một đại lượng theo thời gian (xu hướng tăng/giảm).</li>
+                        
+                    </ul>
+                    <p><b>Nguyên tắc:</b> Lựa chọn biểu đồ phải dựa trên đặc điểm của dữ liệu và mục đích muốn làm nổi bật điều gì.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Phân tích dữ liệu <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://img.loigiaihay.com/picture/2023/0601/c4-b3-phan-tich-du-lieu.png" alt="Sơ đồ tư duy Bài 3 Chương 4">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Phân tích biểu đồ:</b> Đọc các thông tin chính trên biểu đồ (tiêu đề, các trục, các số liệu cụ thể).</li>
+                        <li><b>Nhận xét xu hướng:</b> Tìm ra các giá trị lớn nhất, nhỏ nhất, trung bình hoặc sự thay đổi đột ngột giữa các mốc dữ liệu.</li>
+                        <li><b>Rút ra kết luận:</b> Từ việc phân tích số liệu để dự báo, so sánh hoặc đưa ra lời giải thích cho một hiện tượng thực tế.</li>
+                        <li><b>Lưu ý:</b> Cần cảnh giác với các biểu đồ có thể gây hiểu lầm (do chia khoảng cách trên các trục không đều hoặc không bắt đầu từ số 0).</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 5: HÀM SỐ VÀ ĐỒ THỊ <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+    
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Khái niệm hàm số <span class="arrow">▼</span>
+            </div>
+
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/5-1701424484.png" alt="Sơ đồ tư duy Bài 1">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Đại lượng <b><i>y</i></b> là hàm số của đại lượng thay đổi <b><i>x</i></b> nếu với mỗi giá trị của <b><i>x</i></b>, ta xác định được <b>duy nhất</b> một giá trị tương ứng của <b><i>y</i></b>.</li>
+                        <li><b>Kí hiệu:</b> <b><i>y = f(x)</i></b> hoặc <b><i>y = g(x)</i></b>.</li>
+                        <li><b>Giá trị hàm số:</b> Tại <b><i>x = a</i></b>, giá trị tương ứng của hàm số được kí hiệu là <b><i>f(a)</i></b>.</li>
+                        <li><b>Cách cho hàm số:</b> Hàm số có thể được cho bằng bảng giá trị hoặc bằng một công thức toán học.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Tọa độ một điểm và đồ thị của hàm số <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/1-1701424668.png" alt="Sơ đồ tư duy Bài 2">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Mặt phẳng tọa độ Oxy:</b> Trục <b><i>Ox</i></b>  (trục hoành), trục <b><i>Oy</i></b> (trục tung) vuông góc tại gốc tọa độ <b><i>O(0;0)</i></b>.</li>
+                        <li><b>Tọa độ điểm <b><i>M(a;b)</i></b>:</b> Số <b><i>a</i></b> là hoành độ (viết trước), số <b><i>b</i></b> là tung độ (viết sau).</li>
+                        <li><b>Đồ thị hàm số:</b> Là tập hợp tất cả các điểm biểu diễn các cặp giá trị tương ứng <b><i>(x;y)</i></b>  trên mặt phẳng tọa độ Oxy.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Hàm số bậc nhất y = ax + b (a ≠ 0) <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/2-1701424774.png" alt="Sơ đồ tư duy Bài 3">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Hàm số bậc nhất có công thức <b><i>y = ax + b</i></b> với <b><i>a, b</i></b> là các số cho trước và <b><i>a # 0</i></b>.</li>
+                        <li><b>Tính chất đồng biến/nghịch biến:</b>
+                            <br>- Hàm số <b>đồng biến</b> trên <b><i>R</i></b> khi <b><i>a > 0</i></b>.
+                            <br>- Hàm số <b>nghịch biến</b> trên <b><i>R</i></b> khi <b><i>a < 0</i></b>.
+                        </li>
+                        <li><b>Cách vẽ đồ thị (Đường thẳng):</b>
+                            <br>- Tìm giao điểm với <b><i>Oy</i></b>: <b><i>x=0 → y=b</i></b> ta được điểm <b><i>(0; b)</i></b>.
+                            <br>- Tìm giao điểm với <b><i>Ox</i></b>: <b><i>y=0 → x=-b/a</i></b> ta được điểm <b><i>(-b/a; 0)</i></b>.
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 4: Hệ số góc của đường thẳng <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://tailieumoi.vn/storage/uploads/images/95768/1-10-1701332778.png" alt="Sơ đồ tư duy Bài 4">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Hệ số góc:</b> Trong công thức <b><i>y = ax + b</i></b>, số <b><i>a</i></b> được gọi là hệ số góc của đường thẳng.</li>
+                        <li><b>Vị trí tương đối của hai đường thẳng <b><i>d</i></b> và <b><i>d'</i></b>:</b>
+                            <br>- <b>Song song:</b> <b><i>a = a'</i></b> và <b><i>b # b'</i></b>.
+                            <br>- <b>Trùng nhau:</b> <b><i>a = a'</i></b> và <b><i>b = b'</i></b>.
+                            <br>- <b>Cắt nhau:</b> <b><i>a # a'</i></b>.
+                        </li>
+                        <li><b>Mối liên hệ góc:</b> Khi hệ số góc <b><i>a</i></b> bằng nhau thì hai đường thẳng song song hoặc trùng nhau (có cùng độ dốc so với trục <b><i>Ox</i></b>).</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 6: PHƯƠNG TRÌNH BẬC NHẤT MỘT ẨN <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Phương trình bậc nhất một ẩn <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/4-1701425094.png" alt="Sơ đồ tư duy Bài 1 Chương 6">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Khái niệm phương trình bậc nhất một ẩn:</b> Là phương trình có dạng <b>ax + b = 0</b>, trong đó <b>a</b> và <b>b</b> là hai số đã cho và <b>a ≠ 0</b>.</li>
+                        <li><b>Quy tắc chuyển vế:</b> Trong một phương trình, ta có thể chuyển một hạng tử từ vế này sang vế kia và phải <b>đổi dấu</b> hạng tử đó.</li>
+                        <li><b>Quy tắc nhân với một số:</b> Trong một phương trình, ta có thể nhân hoặc chia cả hai vế với cùng một số khác 0.</li>
+                        <li><b>Cách giải phương trình ax + b = 0:</b>
+                            <br>1. Chuyển vế: <b>ax = -b</b>
+                            <br>2. Chia cho a: <b>x = -b/a</b>
+                            <br>3. Kết luận tập nghiệm: <b>S = {-b/a}</b>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Giải bài toán bằng cách lập phương trình bậc nhất <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/5-1701425409.png" alt="Sơ đồ tư duy Bài 2 Chương 6">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <p><b>Quy trình giải bài toán gồm 3 bước tiêu chuẩn:</b></p>
+                    <ul>
+                        <li><b>Bước 1: Lập phương trình:</b>
+                            <br>- Chọn ẩn số và đặt điều kiện thích hợp cho ẩn số.
+                            <br>- Biểu diễn các đại lượng chưa biết theo ẩn và các đại lượng đã biết.
+                            <br>- Lập phương trình biểu thị mối quan hệ giữa các đại lượng.
+                        </li>
+                        <li><b>Bước 2: Giải phương trình:</b> Thực hiện các phép tính biến đổi để tìm giá trị của ẩn.</li>
+                        <li><b>Bước 3: Trả lời:</b> Kiểm tra xem các nghiệm tìm được có thỏa mãn điều kiện của ẩn hay không, rồi kết luận.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 7: ĐỊNH LÍ THALÈS <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Định lí Thalès trong tam giác <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/6-1701425848.png" alt="Sơ đồ tư duy Bài 1 Chương 7">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Đoạn thẳng tỉ lệ:</b> Hai đoạn thẳng AB và CD gọi là tỉ lệ với hai đoạn thẳng A'B' và C'D' nếu có tỉ lệ thức: <b>AB/CD = A'B'/C'D'</b>.</li>
+                        <li><b>Định lí Thalès thuận:</b> Nếu một đường thẳng song song với một cạnh của tam giác và cắt hai cạnh còn lại thì nó định ra trên hai cạnh đó những đoạn thẳng tương ứng tỉ lệ.</li>
+                        
+                        <li><b>Định lí Thalès đảo:</b> Nếu một đường thẳng cắt hai cạnh của một tam giác và định ra trên hai cạnh này những đoạn thẳng tương ứng tỉ lệ thì đường thẳng đó song song với cạnh còn lại của tam giác.</li>
+                        <li><b>Hệ quả:</b> Nếu một đường thẳng song song với một cạnh của tam giác và cắt hai cạnh còn lại thì nó tạo thành một tam giác mới có ba cạnh tương ứng tỉ lệ với ba cạnh của tam giác đã cho.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Đường trung bình của tam giác <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/7-1701425961.png" alt="Sơ đồ tư duy Bài 2 Chương 7">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Đường trung bình của tam giác là đoạn thẳng nối trung điểm hai cạnh của tam giác đó.</li>
+                        
+                        <li><b>Tính chất:</b> Đường trung bình của tam giác thì song song với cạnh thứ ba và bằng nửa cạnh ấy.</li>
+                        <li><b>Ứng dụng:</b> Dùng để chứng minh hai đường thẳng song song, chứng minh trung điểm hoặc tính độ dài cạnh trong tam giác.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Tính chất đường phân giác của tam giác <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/8-1701426065.png" alt="Sơ đồ tư duy Bài 3 Chương 7">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định lí:</b> Trong tam giác, đường phân giác của một góc chia cạnh đối diện thành hai đoạn thẳng tỉ lệ với hai cạnh kề hai đoạn ấy.</li>
+                        
+                        <li><b>Công thức:</b> Nếu AD là đường phân giác của góc A (D thuộc BC) thì: <b>DB/DC = AB/AC</b> hoặc <b>DB/AB = DC/AC</b>.</li>
+                        <li><b>Lưu ý:</b> Định lí vẫn đúng đối với đường phân giác của góc ngoài của tam giác.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 8: HÌNH ĐỒNG DẠNG <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Hai tam giác đồng dạng <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/1-1701426360.png" alt="Sơ đồ tư duy Bài 1 Chương 8">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Định nghĩa:</b> Tam giác A'B'C' gọi là đồng dạng với tam giác ABC nếu: các góc tương ứng bằng nhau và các cạnh tương ứng tỉ lệ.</li>
+                        <li><b>Kí hiệu:</b> ΔA'B'C' ∽ ΔABC.</li>
+                        <li><b>Tỉ số đồng dạng:</b> k = A'B'/AB = B'C'/BC = C'A'/CA.</li>
+                        <li><b>Định lí:</b> Nếu một đường thẳng cắt hai cạnh của một tam giác và song song với cạnh còn lại thì nó tạo thành một tam giác mới đồng dạng với tam giác đã cho.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Các trường hợp đồng dạng của hai tam giác <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/2-1701426474.png" alt="Sơ đồ tư duy Bài 2 Chương 8">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Trường hợp 1 (c.c.c):</b> Nếu ba cạnh của tam giác này tỉ lệ với ba cạnh của tam giác kia.</li>
+                        <li><b>Trường hợp 2 (c.g.c):</b> Nếu hai cạnh của tam giác này tỉ lệ với hai cạnh của tam giác kia và hai góc tạo bởi các cặp cạnh đó bằng nhau.</li>
+                        <li><b>Trường hợp 3 (g.g):</b> Nếu hai góc của tam giác này lần lượt bằng hai góc của tam giác kia.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 3: Các trường hợp đồng dạng của hai tam giác vuông <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/3-1701931745.png" alt="Sơ đồ tư duy Bài 3 Chương 8">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Trường hợp đặc biệt:</b> Nếu cạnh huyền và một cạnh góc vuông của tam giác vuông này tỉ lệ với cạnh huyền và cạnh góc vuông của tam giác vuông kia.</li>
+                        <li><b>Trường hợp góc nhọn:</b> Hai tam giác vuông đồng dạng nếu có một cặp góc nhọn tương ứng bằng nhau.</li>
+                        <li><b>Tỉ số diện tích:</b> Tỉ số diện tích của hai tam giác đồng dạng bằng bình phương tỉ số đồng dạng (S'/S = k²).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 4: Hai hình đồng dạng <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/4-1701931979.png" alt="Sơ đồ tư duy Bài 4 Chương 8">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Hình đồng dạng phối cảnh (Hình vị tự):</b> Là hai hình mà các đường thẳng nối các cặp điểm tương ứng cùng đi qua một điểm (tâm phối cảnh).</li>
+                        <li><b>Đặc điểm:</b> Hai hình đồng dạng phối cảnh luôn đồng dạng với nhau, nhưng hai hình đồng dạng chưa chắc đã phối cảnh.</li>
+                        <li><b>Hình đồng dạng:</b> Hai hình được gọi là đồng dạng nếu chúng có cùng hình dạng nhưng có thể khác nhau về kích thước.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header" onclick="toggleSection(this)">
+        CHƯƠNG 9: MỘT SỐ YẾU TỐ XÁC SUẤT <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 1: Mô tả xác suất bằng tỉ số <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/5-1701932340.png" alt="Sơ đồ tư duy Bài 1 Chương 9">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Kết quả thuận lợi:</b> Là các kết quả của một phép thử làm cho biến cố đó xảy ra.</li>
+                        <li><b>Công thức tính xác suất:</b> Xác suất của biến cố A, kí hiệu là P(A), được tính bằng tỉ số giữa số kết quả thuận lợi cho biến cố A và tổng số kết quả có thể xảy ra.</li>
+                        <li style="list-style: none; text-align: center; color: #d93025; font-size: 1.2em; margin: 10px 0;">
+                            <b>P(A) = (Số kết quả thuận lợi) / (Tổng số kết quả có thể xảy ra)</b>
+                        </li>
+                        <li><b>Đặc điểm:</b> Xác suất của một biến cố luôn nằm trong khoảng từ 0 đến 1.
+                            <br>- Biến cố không thể có xác suất bằng 0.
+                            <br>- Biến cố chắc chắn có xác suất bằng 1.
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="lesson-wrapper">
+            <div class="lesson-header" onclick="toggleSection(this)">
+                Bài 2: Xác suất lí thuyết và xác suất thực nghiệm <span class="arrow">▼</span>
+            </div>
+            <div class="lesson-content">
+                <h4>1. Lý thuyết tổng hợp</h4>
+                <div class="mindmap">
+                    <img src="https://vietjack.me/storage/uploads/images/26992/6-1701932471.png" alt="Sơ đồ tư duy Bài 2 Chương 9">
+                </div>
+                <h4>2. Ghi nhớ</h4>
+                <div class="formula-box">
+                    <ul>
+                        <li><b>Xác suất lí thuyết:</b> Là xác suất được tính bằng cách sử dụng các giả định về tính đồng khả năng của các kết quả có thể xảy ra.</li>
+                        <li><b>Xác suất thực nghiệm:</b> Được tính dựa trên dữ liệu thu được thông qua thực hiện thí nghiệm hoặc quan sát thực tế nhiều lần.</li>
+                        <li style="list-style: none; text-align: center; border: 1px dashed #1a73e8; padding: 10px; margin: 10px 0;">
+                            <b>P(thực nghiệm) = (Số lần biến cố xảy ra) / (Tổng số lần thực hiện thí nghiệm)</b>
+                        </li>
+                        <li><b>Mối liên hệ:</b> Khi số lần thực hiện thí nghiệm càng lớn (càng nhiều lần thử), xác suất thực nghiệm của một biến cố sẽ càng tiến gần đến xác suất lí thuyết của biến cố đó.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="chapter-wrapper">
+    <div class="chapter-header2" onclick="toggleSection(this)">
+        VIDEO BÀI GIẢNG <span class="arrow">▼</span>
+    </div>
+    <div class="chapter-content">
+        <div class="video-list-wrapper">
+            <div class="video-item">
+                <p><b>PLAYLIST VIDEO HƯỚNG DẪN - THẦY QUANG</b></p>
+                <div class="video-container">
+                    <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/videoseries?list=PLCd8j6ZYo0laWogGY2fbYk3HPwfr2l42b" 
+                            frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSection(element) {
+        element.classList.toggle("active");
+        var content = element.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
