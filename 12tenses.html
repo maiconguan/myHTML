@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    :root { 
+        --past: #e74c3c; --present: #27ae60; --future: #2980b9; 
+        --accent: #764ba2; --bg: #f4f7f6;
+    }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: auto; padding: 15px; background: var(--bg); }
+    
+    .intro-header { text-align: center; padding: 30px; background: white; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+    /* TIMELINE */
+    .timeline-container { background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 40px; overflow-x: auto; }
+    .timeline-svg { min-width: 1000px; display: block; margin: auto; }
+    
+    /* COLLAPSE SYSTEM */
+    .tense-group-title { margin: 40px 0 15px; padding: 12px 25px; background: var(--accent); color: white; border-radius: 8px; font-size: 22px; font-weight: bold; }
+    .tense-card { background: white; border: 1px solid #eee; border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    summary { padding: 20px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 18px; color: #2c3e50; }
+    details[open] summary { border-bottom: 2px solid #f0f0f0; background: #fdfdfd; }
+    
+    .present-c { border-left: 10px solid var(--present); }
+    .past-c { border-left: 10px solid var(--past); }
+    .future-c { border-left: 10px solid var(--future); }
+
+    .inner { padding: 25px; }
+    .meta-box { background: #fcfcfc; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #f0f0f0; font-size: 15px; }
+    .sig { color: #d32f2f; font-weight: bold; }
+
+    /* TABLE DESIGN */
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
+    th { background: #f1f3f5; padding: 12px; font-size: 12px; color: #495057; text-transform: uppercase; border: 1px solid #dee2e6; }
+    td { padding: 12px; border: 1px solid #dee2e6; font-size: 14px; vertical-align: middle; }
+    .row-header { background: #f8f9fa; font-weight: bold; color: #212529; text-align: center; font-size: 11px; letter-spacing: 1px; }
+    .col-type { width: 18%; font-weight: bold; color: #1a73e8; }
+    .col-form { width: 44%; font-family: 'Consolas', monospace; font-weight: bold; color: #c2185b; }
+    .col-ex { width: 38%; font-style: italic; color: #6c757d; }
+    b { color: #d32f2f; }
+</style>
+</head>
+<body>
+
+<div class="intro-header">
+    <h1 style="margin:0; color:var(--accent);">TRỌN BỘ CÔNG THỨC 12 THÌ TIẾNG ANH</h1>
+</div>
+
+<div class="timeline-container">
+    
+    <svg class="timeline-svg" viewBox="0 0 1000 200">
+        <line x1="50" y1="100" x2="950" y2="100" stroke="#adb5bd" stroke-width="3" />
+        <polygon points="950,93 965,100 950,107" fill="#adb5bd" />
+        <line x1="500" y1="40" x2="500" y2="160" stroke="#343a40" stroke-width="2" stroke-dasharray="4,4" />
+        <text x="475" y="30" font-weight="bold" fill="#343a40">PRESENT (NOW)</text>
+        <circle cx="200" cy="100" r="6" fill="var(--past)" /><text x="160" y="130" font-size="10" fill="var(--past)">Past Groups</text>
+        <circle cx="500" cy="100" r="8" fill="var(--present)" /><text x="465" y="130" font-size="10" fill="var(--present)">Present Groups</text>
+        <circle cx="800" cy="100" r="6" fill="var(--future)" /><text x="770" y="130" font-size="10" fill="var(--future)">Future Groups</text>
+    </svg>
+</div>
+
+<div class="tense-group-title">I. NHÓM HIỆN TẠI (PRESENT TENSES)</div>
+
+<div class="tense-card present-c">
+    <details>
+        <summary>01. Hiện tại đơn (Present Simple)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/62cb71ed0deb2a001ff46746/thi-hien-tai-don.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+            <div class="meta-box"><b>Cách dùng:</b> Thói quen, sự thật hiển nhiên.
+            	<br><b>Dấu hiệu:</b> <span class="sig">Always, every day, usually.</span></div>
+            <table>
+                <tr class="row-header"><td colspan="3">ĐỘNG TỪ THƯỜNG</td></tr>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + V(s/es)</td><td class="col-ex">He <b>studies</b> English.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + don't/doesn't + V_inf</td><td class="col-ex">I <b>don't smoke</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Do/Does + S + V_inf?</td><td class="col-ex"><b>Do</b> you <b>know</b> him?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + do/does + S + V_inf?</td><td class="col-ex">Where <b>do</b> you <b>live</b>?</td></tr>
+                <tr class="row-header"><td colspan="3">ĐỘNG TỪ TO BE</td></tr>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + am/is/are + O</td><td class="col-ex">I <b>am</b> a student.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + am/is/are + not + O</td><td class="col-ex">They <b>aren't</b> here.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Am/Is/Are + S + O?</td><td class="col-ex"><b>Is</b> she hungry?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + am/is/are + S + O?</td><td class="col-ex">Who <b>are</b> you?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card present-c">
+    <details>
+        <summary>02. Hiện tại tiếp diễn (Present Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/62cbcf3b0deb2a001f0472f4/thi-hien-tai-tiep-dien.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+            <div class="meta-box"><b>Cách dùng:</b> Đang xảy ra lúc nói. 
+            	<br><b>Dấu hiệu:</b> <span class="sig">Now, at the moment, Listen!.</span></div>
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + am/is/are + V-ing</td><td class="col-ex">They <b>are playing</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + am/is/are + not + V-ing</td><td class="col-ex">I <b>am not eating</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Am/Is/Are + S + V-ing?</td><td class="col-ex"><b>Is</b> he <b>working</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + am/is/are + S + V-ing?</td><td class="col-ex">What <b>are</b> you <b>doing</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card present-c">
+    <details>
+        <summary>03. Hiện tại hoàn thành (Present Perfect)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/62cbf7730deb2a001f0d2263/thi-hien-tai-hoan-thanh.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+            <div class="meta-box"><b>Cách dùng:</b> Vừa mới xảy ra, lặp lại. <br>
+            	<b>Dấu hiệu:</b> <span class="sig">Just, already, yet, since, for.</span></div>
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + have/has + V3/ed</td><td class="col-ex">I <b>have seen</b> her.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + haven't/hasn't + V3/ed</td><td class="col-ex">She <b>hasn't done</b> it.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Have/Has + S + V3/ed?</td><td class="col-ex"><b>Have</b> you <b>finished</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + have/has + S + V3/ed?</td><td class="col-ex">What <b>have</b> you <b>done</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card present-c">
+    <details>
+        <summary>04. Hiện tại hoàn thành tiếp diễn (Present Perfect Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/614eb8f392ab98001ef86b54/thi-hien-tai-hoan-thanh-tiep-dien-present-perfect-continuous-1.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+            <div class="meta-box"><b>Cách dùng:</b> Nhấn mạnh tính liên tục của hành động kéo dài đến hiện tại. <br>
+            	<b>Dấu hiệu:</b> <span class="sig">For, since, all day.</span></div>
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + have/has + been + V-ing</td><td class="col-ex">I <b>have been waiting</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + haven't/hasn't + been + V-ing</td><td class="col-ex">It <b>hasn't been raining</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Have/Has + S + been + V-ing?</td><td class="col-ex"><b>Have</b> you <b>been sleeping</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + have/has + S + been + V-ing?</td><td class="col-ex">How long <b>have</b> you <b>been waiting</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-group-title">II. NHÓM QUÁ KHỨ (PAST TENSES)</div>
+
+<div class="tense-card past-c">
+    <details>
+        <summary>05. Quá khứ đơn (Past Simple)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/6132ef4c602a9f001fdd25d3/thi-qua-khu-don-past-simple-cach-su-dung-cau-truc-va-bai-tap.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+            <div class="meta-box"><b>Cách dùng:</b> Đã kết thúc hoàn toàn. <br>
+            	<b>Dấu hiệu:</b> <span class="sig">Yesterday, ago, last week.</span></div>
+            <table>
+                <tr class="row-header"><td colspan="3">ĐỘNG TỪ THƯỜNG</td></tr>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + V2/ed</td><td class="col-ex">I <b>visited</b> him.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + did + not + V_inf</td><td class="col-ex">He <b>didn't go</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Did + S + V_inf?</td><td class="col-ex"><b>Did</b> you <b>call</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + did + S + V_inf?</td><td class="col-ex">Why <b>did</b> you <b>leave</b>?</td></tr>
+                <tr class="row-header"><td colspan="3">ĐỘNG TỪ TO BE</td></tr>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + was/were + O</td><td class="col-ex">She <b>was</b> at home.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + was/were + not + O</td><td class="col-ex">We <b>weren't</b> late.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Was/Were + S + O?</td><td class="col-ex"><b>Was</b> he tired?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + was/were + S + O?</td><td class="col-ex">Where <b>were</b> you?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card past-c">
+    <details>
+        <summary>06. Quá khứ tiếp diễn (Past Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/61444b0589817d001f95940e/thi-qua-khu-tiep-dien-past-continuous-zim-100.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+            <div class="meta-box"><b>Cách dùng:</b> Đang diễn ra tại mốc quá khứ. <br>
+            	<b>Dấu hiệu:</b> <span class="sig">At + giờ + yesterday, while.</span></div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + was/were + V-ing</td><td class="col-ex">I <b>was cooking</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + wasn't/weren't + V-ing</td><td class="col-ex">They <b>weren't working</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Was/Were + S + V-ing?</td><td class="col-ex"><b>Was</b> he <b>sleeping</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + was/were + S + V-ing?</td><td class="col-ex">What <b>were</b> you <b>doing</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card past-c">
+    <details>
+        <summary>07. Quá khứ hoàn thành (Past Perfect)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/62ce8e64040958001f463b29/thi-qua-khu-hoan-thanh-past-perfect-tense-01.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Diễn tả một hành động xảy ra và hoàn thành trước một hành động khác hoặc một mốc thời gian khác trong quá khứ. <br>
+    <b>Dấu hiệu:</b> <span class="sig">Before, after, by the time, as soon as, until then, when.</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + had + V3/ed</td><td class="col-ex">I <b>had done</b> it.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + hadn't + V3/ed</td><td class="col-ex">He <b>hadn't seen</b> me.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Had + S + V3/ed?</td><td class="col-ex"><b>Had</b> you <b>left</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + had + S + V3/ed?</td><td class="col-ex">What <b>had</b> she <b>said</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card past-c">
+    <details>
+        <summary>08. Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/614c017e0ade6e001f17c75b/thi-qua-khu-hoan-thanh-tiep-dien-past-perfect-continuous.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Nhấn mạnh quá trình của một hành động xảy ra liên tục trước một hành động/mốc thời gian khác trong quá khứ. <br>
+    <b>Dấu hiệu:</b> <span class="sig">Until then, by the time, for + khoảng thời gian (nhấn mạnh tính liên tục).</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + had + been + V-ing</td><td class="col-ex">He <b>had been working</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + hadn't + been + V-ing</td><td class="col-ex">I <b>hadn't been sleeping</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Had + S + been + V-ing?</td><td class="col-ex"><b>Had</b> you <b>been waiting</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + had + S + been + V-ing?</td><td class="col-ex">How long <b>had</b> you <b>been waiting</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-group-title">III. NHÓM TƯƠNG LAI (FUTURE TENSES)</div>
+
+<div class="tense-card future-c">
+    <details>
+        <summary>09. Tương lai đơn (Future Simple)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/613a6323ec2d8c001f387da6/thi-tuong-lai-don-future-simple-tense-cach-su-dung-cau-truc-va-bai-tap-100.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Diễn tả một quyết định tức thì, một lời hứa, lời đe dọa hoặc một dự đoán không có căn cứ xác thực. <br>
+    <b>Dấu hiệu:</b> <span class="sig">Tomorrow, next week/month, in + thời gian, I think, maybe, perhaps.</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + will + V_inf</td><td class="col-ex">I <b>will help</b> you.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + won't + V_inf</td><td class="col-ex">They <b>won't go</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Will + S + V_inf?</td><td class="col-ex"><b>Will</b> you <b>come</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + will + S + V_inf?</td><td class="col-ex">What <b>will</b> you <b>buy</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card future-c">
+    <details>
+        <summary>10. Tương lai tiếp diễn (Future Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/62cd14cd0deb2a001f375ef7/thi-tuong-lai-tiep-dien.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Diễn tả một hành động đang xảy ra tại một thời điểm cụ thể hoặc một khoảng thời gian trong tương lai. <br>
+    <b>Dấu hiệu:</b> <span class="sig">At + giờ + tomorrow, at this time next week, in the future.</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + will be + V-ing</td><td class="col-ex">I <b>will be flying</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + won't be + V-ing</td><td class="col-ex">He <b>won't be working</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Will + S + be + V-ing?</td><td class="col-ex"><b>Will</b> you <b>be staying</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + will + S + be + V-ing?</td><td class="col-ex">What <b>will</b> you <b>be doing</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card future-c">
+    <details>
+        <summary>11. Tương lai hoàn thành (Future Perfect)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/615279877bf425001f60c7e4/thi-tuong-lai-hoan-thanh-future-perfect.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Diễn tả một hành động sẽ hoàn thành trước một mốc thời gian hoặc một hành động khác trong tương lai. <br>
+    <b>Dấu hiệu:</b> <span class="sig">By + mốc thời gian, by the end of, by the time + mệnh đề hiện tại đơn.</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + will have + V3/ed</td><td class="col-ex">I <b>will have done</b> it.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + won't have + V3/ed</td><td class="col-ex">He <b>won't have left</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Will + S + have + V3/ed?</td><td class="col-ex"><b>Will</b> you <b>have finished</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + will + S + have + V3/ed?</td><td class="col-ex">When <b>will</b> you <b>have finished</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<div class="tense-card future-c">
+    <details>
+        <summary>12. Tương lai hoàn thành tiếp diễn (Future Perfect Continuous)</summary>
+        <div class="inner">
+        	<img src="https://media.zim.vn/614ebb5e92ab98001ef86b5d/tuong-lai-hoan-thanh-tiep-dien-future-perfect-continuous.webp?w=1920&q=75"
+  				style="max-width:50%; height:auto;">
+
+  				<div class="meta-box">
+    <b>Cách dùng:</b> Nhấn mạnh khoảng thời gian kéo dài của một hành động cho đến một mốc thời gian cụ thể trong tương lai. <br>
+    <b>Dấu hiệu:</b> <span class="sig">By then, for + khoảng thời gian, by the time + mệnh đề hiện tại đơn.</span>
+</div>
+
+            <table>
+                <tr><td class="col-type">Khẳng định (+)</td><td class="col-form">S + will have been + V-ing</td><td class="col-ex">I <b>will have been living</b>.</td></tr>
+                <tr><td class="col-type">Phủ định (-)</td><td class="col-form">S + won't have been + V-ing</td><td class="col-ex">We <b>won't have been studying</b>.</td></tr>
+                <tr><td class="col-type">Nghi vấn (?)</td><td class="col-form">Will + S + have been + V-ing?</td><td class="col-ex"><b>Will</b> you <b>have been working</b>?</td></tr>
+                <tr><td class="col-type">Wh- Question</td><td class="col-form">Wh- + will + S + have been + V-ing?</td><td class="col-ex">How long <b>will</b> you <b>have been waiting</b>?</td></tr>
+            </table>
+        </div>
+    </details>
+</div>
+
+<p style="text-align:center; color:#888; margin-top:50px;">Học tập là một hành trình - Chúc con học tốt!</p>
+
+</body>
+</html>
