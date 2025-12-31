@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu Trúc Câu - So Sánh</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-light: #f9f9f9;
+            --note-bg: #fff3cd;
+            --mẹo-bg: #d4edda;
+            --primary: #1a73e8; 
+            --secondary: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary-color); padding: 20px; background-color: #eee; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: var(--accent-color); text-transform: uppercase; border-bottom: 3px solid var(--accent-color); padding-bottom: 10px; }
+        .header-main { background: var(--primary-color); color: white; padding: 15px; border-radius: 8px; cursor: pointer; margin-top: 20px; font-weight: bold; font-size: 1.2em; display: flex; justify-content: space-between; }
+        .header-sub { background: #ecf0f1; padding: 12px 18px; font-weight: 600; border-bottom: 1px solid #eee; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid var(--accent-color); }
+
+        .content { padding: 15px; border: 1px solid #ddd; border-radius: 0 0 8px 8px; border-top: none; display: none;}
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; color: var(--primary-color); }
+        .example { color: #007bff; font-weight: bold; }
+        .note-box { background-color: var(--note-bg); border-left: 5px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .mẹo-box { background-color: var(--mẹo-bg); border-left: 5px solid #28a745; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .highlight { color: var(--accent-color); font-weight: bold; }
+        .arrow { transition: transform 0.3s; }
+        .collapsed .arrow { transform: rotate(-90deg); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cấu Trúc Câu Trong Tiếng Anh</h1>
+
+    <div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 1: CÂU SO SÁNH (COMPARISONS) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu so sánh được dùng để đối chiếu đặc điểm, tính chất giữa hai hoặc nhiều đối tượng (người, sự vật, sự việc).</p>
+
+        <div class="mẹo-box">
+            💡 <b>BƯỚC 1: Phải phân biệt được Tính từ Ngắn và Tính từ Dài</b>
+            <ul>
+                <li><b>Tính từ ngắn:</b> Có 1 âm tiết (Fast, Tall, Short) hoặc 2 âm tiết tận cùng là: <b>-y, -le, -ow, -er, -et</b> (Happy, Simple, Narrow).</li>
+                <li><b>Tính từ dài:</b> Có 2 âm tiết trở lên (Beautiful, Intelligent, Expensive).</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">
+            1.1. So sánh bằng (Positive Degree) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Dùng để diễn tả sự tương đồng giữa hai đối tượng.</p>
+            <div class="note-box">
+                <b>Công thức:</b> <br>
+                (+) <b>S + be + AS + adj + AS + O</b> <br>
+                (-) <b>S + be + NOT + AS/SO + adj + AS + O</b>
+            </div>
+            <ul>
+                <li><span class="example">I am <b>AS TALL AS</b> my father.</span> (Tôi <b>CAO BẰNG</b> bố tôi.)</li>
+                <li><span class="example">This dress is <b>NOT AS EXPENSIVE AS</b> that one.</span> (Chiếc váy này <b>KHÔNG ĐẮT BẰNG</b> chiếc kia.)</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">1.2. So sánh hơn (Comparative Degree) <span class="arrow">▼</span></div>
+        <div class="content">
+            <p>Dùng để so sánh giữa 2 đối tượng, một bên hơn bên còn lại.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loại Tính từ</th>
+                        <th>Công thức</th>
+                        <th>Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tính từ ngắn</b></td>
+                        <td><b>Adj-ER + THAN</b></td>
+                        <td><span class="example">He is <b>TALLER THAN</b> me.</span><br>(Anh ấy <b>CAO HƠN</b> tôi.)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tính từ dài</b></td>
+                        <td><b>MORE + Adj + THAN</b></td>
+                        <td><span class="example">She is <b>MORE BEAUTIFUL THAN</b> her sister.</span><br>(Cô ấy <b>XINH ĐẸP HƠN</b> chị mình.)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mẹo-box">
+                💡 <b>MẸO CHÍNH TẢ:</b> Với tính từ kết thúc bằng <b>-y</b> (như Happy), hãy đổi thành <b>-i</b> rồi mới thêm <b>-er</b> (Happier).
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">1.3. So sánh nhất (Superlative Degree) <span class="arrow">▼</span></div>
+        <div class="content">
+            <p>Dùng để so sánh một đối tượng với <b>tất cả</b> các đối tượng còn lại trong nhóm (từ 3 đối tượng trở lên).</p>
+            [Image showing the superlative degree comparison of three or more objects]
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loại Tính từ</th>
+                        <th>Công thức</th>
+                        <th>Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tính từ ngắn</b></td>
+                        <td><b>THE + Adj-EST</b></td>
+                        <td><span class="example">Mount Everest is <b>THE HIGHEST</b> mountain.</span><br>(Everest là ngọn núi <b>CAO NHẤT</b>.)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tính từ dài</b></td>
+                        <td><b>THE MOST + Adj</b></td>
+                        <td><span class="example">This is <b>THE MOST EXPENSIVE</b> car.</span><br>(Đây là chiếc xe <b>ĐẮT NHẤT</b>.)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="note-box">
+                ⚠️ <b>GHI NHỚ:</b> Luôn phải có mạo từ <b>"THE"</b> trước tính từ so sánh nhất.
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">1.4. Các trường hợp Bất quy tắc (Học thuộc lòng) <span class="arrow">▼</span></div>
+        <div class="content">
+            <p>Những từ này không thêm -er/-est mà biến đổi hoàn toàn:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tính từ gốc</th>
+                        <th>So sánh hơn</th>
+                        <th>So sánh nhất</th>
+                        <th>Nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>Good</b></td><td><b>Better</b></td><td><b>The Best</b></td><td>Tốt</td></tr>
+                    <tr><td><b>Bad</b></td><td><b>Worse</b></td><td><b>The Worst</b></td><td>Tệ/Xấu</td></tr>
+                    <tr><td><b>Far</b></td><td><b>Farther / Further</b></td><td><b>The Farthest / Furthest</b></td><td>Xa</td></tr>
+                    <tr><td><b>Little</b></td><td><b>Less</b></td><td><b>The Least</b></td><td>Ít</td></tr>
+                    <tr><td><b>Many / Much</b></td><td><b>More</b></td><td><b>The Most</b></td><td>Nhiều</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">1.5. Lưu ý & Mẹo làm bài tập nhanh <span class="arrow">▼</span></div>
+        <div class="content">
+            <div class="mẹo-box">
+                💡 <b>MẸO NHẬN BIẾT QUA "TỪ KHÓA":</b>
+                <ul>
+                    <li>Thấy <b>THAN</b> -> Chắc chắn là <b>So sánh hơn</b>.</li>
+                    <li>Thấy <b>THE</b> đứng trước chỗ trống -> Thường là <b>So sánh nhất</b>.</li>
+                    <li>Thấy <b>AS...</b> -> Chắc chắn là <b>So sánh bằng</b>.</li>
+                </ul>
+            </div>
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý GẤP ĐÔI PHỤ ÂM:</b> Với tính từ ngắn có cấu trúc <b>Phụ âm - Nguyên âm - Phụ âm</b> (như BIG, HOT), ta phải gấp đôi phụ âm cuối trước khi thêm đuôi. <br>
+                <i>Ví dụ: Big -> Bi<b>gg</b>er -> The Bi<b>gg</b>est.</i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 2: CÂU ĐIỀU KIỆN (CONDITIONALS) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu điều kiện dùng để diễn tả một sự việc có thể xảy ra hoặc không thể xảy ra nếu một điều kiện nào đó được đáp ứng. Một câu điều kiện gồm 2 vế: <b>Mệnh đề IF (Điều kiện)</b> và <b>Mệnh đề chính (Kết quả)</b>.</p>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.1. Bảng tổng hợp 3 loại câu điều kiện chính <span class="arrow">▼</span> </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loại câu</th>
+                        <th>Cách dùng</th>
+                        <th>Công thức (Vế IF -> Vế Chính)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Loại 1</b></td>
+                        <td>Có thật ở hiện tại/tương lai</td>
+                        <td><b>If + S + V(s/es) , S + WILL/CAN + V-bare</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Loại 2</b></td>
+                        <td>KHÔNG có thật ở hiện tại</td>
+                        <td><b>If + S + V2/ed , S + WOULD/COULD + V-bare</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Loại 3</b></td>
+                        <td>KHÔNG có thật ở quá khứ</td>
+                        <td><b>If + S + Had + V3/ed , S + WOULD HAVE + V3/ed</b></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO GHI NHỚ "LÙI THÌ":</b> <br>
+                - Loại 1: Hiện tại (V1) <br>
+                - Loại 2: Quá khứ (V2) <br>
+                - Loại 3: Quá khứ hoàn thành (Had V3)
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.2. Câu điều kiện Loại 1 (Có thể xảy ra) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Dùng cho các tình huống thực tế, có khả năng xảy ra cao.</p>
+            <ul>
+                <li><span class="example">If it <b>RAINS</b>, I <b>WILL STAY</b> at home.</span> <br> (Nếu trời <b>MƯA</b>, tôi <b>SẼ Ở</b> nhà - Chuyện này rất dễ xảy ra).</li>
+                <li><span class="example">If you <b>STUDY</b> hard, you <b>WILL PASS</b> the exam.</span> <br> (Nếu bạn <b>HỌC</b> chăm, bạn <b>SẼ ĐẬU</b> kỳ thi).</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.3. Câu điều kiện Loại 2 (Giả định hiện tại) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Dùng để mơ mộng hoặc tưởng tượng về những việc <b>trái ngược hoàn toàn</b> với thực tế hiện tại.</p>
+            <ul>
+                <li><span class="example">If I <b>WERE</b> a bird, I <b>WOULD FLY</b>.</span> <br> (Nếu tôi <b>LÀ</b> chim, tôi <b>SẼ BAY</b> - Thực tế tôi là người, không thể là chim).</li>
+                <li><span class="example">If I <b>HAD</b> much money, I <b>WOULD BUY</b> a car.</span> <br> (Nếu tôi <b>CÓ</b> nhiều tiền, tôi <b>SẼ MUA</b> xe - Thực tế tôi đang nghèo).</li>
+            </ul>
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý ĐẶC BIỆT:</b> Trong câu điều kiện loại 2, động từ "To be" luôn chia là <b>WERE</b> cho tất cả các ngôi (I/He/She/It/We/They). <br>
+                <i>Ví dụ: If I <b>were</b> you... (Nếu tôi là bạn...)</i>
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.4. Câu điều kiện Loại 3 (Tiếc nuối quá khứ) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Dùng để diễn tả sự tiếc nuối về một việc đã xảy ra (hoặc không xảy ra) trong quá khứ.</p>
+            <ul>
+                <li><span class="example">If I <b>HAD STUDIED</b> harder, I <b>WOULD HAVE PASSED</b>.</span> <br> (Nếu lúc đó tôi <b>HỌC</b> chăm hơn, tôi <b>ĐÃ ĐẬU</b> rồi - Thực tế là lúc đó không học và đã trượt).</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.5. Cấu trúc UNLESS (Trừ khi / Nếu không) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p><b>UNLESS = IF NOT</b>. Đây là dạng bài tập biến đổi câu cực kỳ phổ biến.</p>
+            <div class="mẹo-box">
+                💡 <b>Ví dụ đối chiếu:</b> <br>
+                - <span class="example"><b>If</b> you <b>don't</b> hurry, you will be late.</span> <br>
+                - <span class="example"><b>Unless</b> you hurry, you will be late.</span> <br>
+                (<b>Nếu không</b> nhanh lên, bạn sẽ trễ đấy).
+            </div>
+            <div class="note-box">
+                ⚠️ <b>GHI NHỚ:</b> Vì bản thân <i>Unless</i> đã mang nghĩa phủ định, nên vế sau nó <b>không dùng "not"</b> nữa.
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">2.6. Mẹo làm bài tập trắc nghiệm <span class="arrow">▼</span> </div>
+        <div class="content">
+            <div class="mẹo-box">
+                💡 <b>QUY TẮC "SOI" MỘT VẾ:</b> <br>
+                Trong bài tập điền từ, hãy nhìn vế đã cho sẵn để suy ra vế còn lại:
+                <ul>
+                    <li>Thấy vế kia có <b>Will</b> -> Vế If chia <b>Hiện tại đơn</b> (Loại 1).</li>
+                    <li>Thấy vế kia có <b>Would + V-bare</b> -> Vế If chia <b>Quá khứ đơn</b> (Loại 2).</li>
+                    <li>Thấy vế kia có <b>Would have + V3</b> -> Vế If chia <b>Quá khứ hoàn thành (Had V3)</b> (Loại 3).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 3: CÂU ƯỚC (WISH / IF ONLY) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu ước dùng để diễn tả mong muốn về một điều gì đó không có thật hoặc khó có thể xảy ra ở quá khứ, hiện tại hoặc tương lai. Ngoài <b>WISH</b>, chúng ta có thể dùng <b>IF ONLY</b> (Giá mà) để nhấn mạnh hơn.</p>
+
+        
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">3.1. Ước cho Tương lai (Future Wish) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Diễn tả mong muốn một việc gì đó sẽ xảy ra hoặc thay đổi trong tương lai.</p>
+            <div class="note-box">
+                <b>Công thức:</b> <br>
+                <b>S + wish + S + WOULD / COULD + V-bare</b>
+            </div>
+            <ul>
+                <li><span class="example">I wish it <b>WOULD STOP</b> raining tomorrow.</span> <br> (Tôi ước ngày mai trời <b>SẼ NGỪNG</b> mưa.)</li>
+                <li><span class="example">I wish I <b>COULD FLY</b> to the moon next year.</span> <br> (Tôi ước năm sau mình <b>CÓ THỂ BAY</b> lên mặt trăng.)</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">3.2. Ước cho Hiện tại (Present Wish) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Diễn tả mong muốn về một điều <b>trái ngược với thực tế</b> đang diễn ra ở hiện tại.</p>
+            <div class="note-box">
+                <b>Công thức:</b> <br>
+                <b>S + wish + S + V2/ed (Quá khứ đơn)</b>
+            </div>
+            <ul>
+                <li><span class="example">I wish I <b>HAD</b> a new phone now.</span> <br> (Tôi ước bây giờ mình <b>CÓ</b> điện thoại mới - Thực tế là đang không có).</li>
+                <li><span class="example">I wish I <b>WERE</b> rich.</span> <br> (Tôi ước mình <b>GIÀU</b> - Thực tế là đang nghèo).</li>
+            </ul>
+            <div class="mẹo-box">
+                💡 <b>MẸO NHỚ:</b> Giống như câu điều kiện loại 2, động từ "To be" trong câu ước hiện tại luôn dùng <b>WERE</b> cho tất cả các ngôi.
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">3.3. Ước cho Quá khứ (Past Wish) <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Diễn tả sự tiếc nuối về một việc <b>đã xảy ra</b> hoặc <b>không xảy ra</b> trong quá khứ.</p>
+            <div class="note-box">
+                <b>Công thức:</b> <br>
+                <b>S + wish + S + HAD + V3/ed (Quá khứ hoàn thành)</b>
+            </div>
+            <ul>
+                <li><span class="example">I wish I <b>HAD STUDIED</b> harder last night.</span> <br> (Tôi ước tối qua mình <b>ĐÃ HỌC</b> chăm hơn - Thực tế là tối qua đã lười).</li>
+                <li><span class="example">If only I <b>HÀD MET</b> her yesterday.</span> <br> (Giá mà hôm qua tôi <b>ĐÃ GẶP</b> cô ấy).</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">3.4. Bảng tổng hợp và Mẹo chuyển đổi câu <span class="arrow">▼</span> </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thời điểm ước</th>
+                        <th>Thì sử dụng</th>
+                        <th>Từ khóa nhận biết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>Tương lai</b></td><td>Would / Could + V-bare</td><td>tomorrow, next week...</td></tr>
+                    <tr><td><b>Hiện tại</b></td><td>Quá khứ đơn (V2/ed)</td><td>now, at present, today...</td></tr>
+                    <tr><td><b>Quá khứ</b></td><td>Quá khứ hoàn thành (Had V3)</td><td>yesterday, last night, ago...</td></tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>QUY TẮC "TRÁI NGƯỢC":</b> <br>
+                Khi chuyển từ một câu sự thật sang câu ước:
+                <ul>
+                    <li>Sự thật là <b>Khẳng định</b> (+) -> Câu ước phải <b>Phủ định</b> (-).</li>
+                    <li>Sự thật là <b>Phủ định</b> (-) -> Câu ước phải <b>Khẳng định</b> (+).</li>
+                    <li>Luôn luôn <b>LÙI MỘT THÌ</b> so với câu sự thật.</li>
+                </ul>
+                <br>
+                <i>Ví dụ: I <b>am</b> short. (Sự thật hiện tại) <br> → I wish I <b>were NOT</b> short. (Câu ước)</i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 4: CÂU CHỦ ĐỘNG & BỊ ĐỘNG (PASSIVE VOICE) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu chủ động là câu có chủ ngữ là người/vật thực hiện hành động. Câu bị động là câu có chủ ngữ là người/vật nhận tác động của hành động đó.</p>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">4.1. Quy tắc chuyển đổi "3 Bước Thần Thánh" <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Để chuyển từ câu Chủ động sang Bị động, học sinh thực hiện theo sơ đồ sau:</p>
+            
+            
+
+            <div class="mẹo-box">
+                <b>3 Bước thực hiện:</b>
+                <ol>
+                    <li>Lấy <b>Tân ngữ (O)</b> của câu chủ động làm <b>Chủ ngữ (S)</b> của câu bị động.</li>
+                    <li>Chia động từ theo công thức: <b>BE + V3/ed</b> (To be chia theo thì của câu gốc).</li>
+                    <li>Đưa <b>Chủ ngữ (S)</b> cũ ra cuối câu, thêm <b>BY</b> phía trước (by + O).</li>
+                </ol>
+            </div>
+            <p><span class="example">Active:</span> Mary <b>buys</b> a book. <br>
+               <span class="example">Passive:</span> A book <b>is bought</b> by Mary.</p>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">4.2. Bảng công thức Bị động chi tiết cho 12 thì <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Để chia đúng câu bị động, học sinh chỉ cần nhớ: <b>Thì của câu chủ động chính là thì của động từ "TO BE" trong câu bị động.</b></p>
+            
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nhóm Thì</th>
+                        <th>Thì (Tense)</th>
+                        <th>Công thức Bị động (Be + V3/ed)</th>
+                        <th>Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fdf2f2;"><td rowspan="4"><b>Hiện tại</b></td>
+                        <td>Hiện tại đơn</td>
+                        <td><b>am/is/are + V3/ed</b></td>
+                        <td>Letters <b>are sent</b> every day.</td>
+                    </tr>
+                    <tr style="background: #fdf2f2;">
+                        <td>Hiện tại tiếp diễn</td>
+                        <td><b>am/is/are + BEING + V3/ed</b></td>
+                        <td>A movie <b>is being watched</b>.</td>
+                    </tr>
+                    <tr style="background: #fdf2f2;">
+                        <td>Hiện tại hoàn thành</td>
+                        <td><b>have/has + BEEN + V3/ed</b></td>
+                        <td>The report <b>has been finished</b>.</td>
+                    </tr>
+                    <tr style="background: #fdf2f2;">
+                        <td>HT hoàn thành tiếp diễn</td>
+                        <td><b>have/has + been + being + V3/ed</b></td>
+                        <td>(Hiếm dùng trong thực tế)</td>
+                    </tr>
+
+                    <tr style="background: #f2f7fd;"><td rowspan="4"><b>Quá khứ</b></td>
+                        <td>Quá khứ đơn</td>
+                        <td><b>was/were + V3/ed</b></td>
+                        <td>The window <b>was broken</b>.</td>
+                    </tr>
+                    <tr style="background: #f2f7fd;">
+                        <td>Quá khứ tiếp diễn</td>
+                        <td><b>was/were + BEING + V3/ed</b></td>
+                        <td>Dinner <b>was being cooked</b> at 7PM.</td>
+                    </tr>
+                    <tr style="background: #f2f7fd;">
+                        <td>Quá khứ hoàn thành</td>
+                        <td><b>had + BEEN + V3/ed</b></td>
+                        <td>The car <b>had been sold</b> before I came.</td>
+                    </tr>
+                    <tr style="background: #f2f7fd;">
+                        <td>QK hoàn thành tiếp diễn</td>
+                        <td><b>had + been + being + V3/ed</b></td>
+                        <td>(Ít phổ biến)</td>
+                    </tr>
+
+                    <tr style="background: #f2fdf2;"><td rowspan="4"><b>Tương lai</b></td>
+                        <td>Tương lai đơn</td>
+                        <td><b>will + BE + V3/ed</b></td>
+                        <td>The bill <b>will be paid</b> tomorrow.</td>
+                    </tr>
+                    <tr style="background: #f2fdf2;">
+                        <td>Tương lai gần (Be going to)</td>
+                        <td><b>am/is/are going to + BE + V3/ed</b></td>
+                        <td>A party <b>is going to be held</b>.</td>
+                    </tr>
+                    <tr style="background: #f2fdf2;">
+                        <td>Tương lai hoàn thành</td>
+                        <td><b>will have + BEEN + V3/ed</b></td>
+                        <td>The project <b>will have been completed</b>.</td>
+                    </tr>
+                    <tr style="background: #f2fdf2;">
+                        <td>Tương lai tiếp diễn</td>
+                        <td><b>will be + being + V3/ed</b></td>
+                        <td>(Hiếm dùng)</td>
+                    </tr>
+                     <tr style="background: #fdf2f2;"><td rowspan="4"><b>Trường hợp đặc biệt</b></td>
+                 
+                        <td><b>Động từ khuyết thiếu</b><br>(can, must, should...)</td>
+                        <td><b>Modal + BE + V3/ed</b></td>
+                        <td>It <b>can be fixed</b>.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO NHẬN DIỆN CÔNG THỨC:</b>
+                <ul>
+                    <li>Cứ thấy các thì <b>Tiếp diễn</b> (Continuous) -> Trong câu bị động phải có <b>BEING</b>.</li>
+                    <li>Cứ thấy các thì <b>Hoàn thành</b> (Perfect) -> Trong câu bị động phải có <b>BEEN</b>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">4.3. Các trường hợp đặc biệt cần lưu ý <span class="arrow">▼</span> </div>
+        <div class="content">
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý VỀ "BY":</b>
+                <ul>
+                    <li>Nếu chủ ngữ là: <i>they, people, someone, everyone, I, you, he...</i> (không rõ ràng) -> <b>Bỏ "by"</b>.</li>
+                    <li>Trật tự câu: <b>Nơi chốn + by + Tân ngữ + Thời gian.</b> <br>
+                    <i>Ví dụ: The cat was found <b>in the garden by me yesterday</b>.</i></li>
+                </ul>
+            </div>
+
+            <div class="mẹo-box">
+                💡 <b>BỊ ĐỘNG VỚI 2 TÂN NGỮ:</b> <br>
+                Nếu câu có 2 tân ngữ (người và vật), ta có thể viết được 2 câu bị động. <br>
+                <span class="example">Active:</span> He gave <b>me</b> (O1) <b>a flower</b> (O2). <br>
+                → <span class="example">P1:</span> I was given a flower by him. <br>
+                → <span class="example">P2:</span> A flower was given <b>to</b> me by him.
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">4.4. Mẹo nhận biết câu bị động trong đề thi <span class="arrow">▼</span> </div>
+        <div class="content">
+            <div class="mẹo-box">
+                💡 <b>DẤU HIỆU "VẬT LÊN ĐẦU":</b> <br>
+                Khi thấy Chủ ngữ là <b>Vật</b> (như: The house, The report, The window...) đứng đầu câu, hãy kiểm tra ngay đáp án có dạng <b>BE + V3/ed</b> không. 90% đó là câu bị động vì vật không thể tự thực hiện hành động.
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 5: CÂU TRỰC TIẾP & GIÁN TIẾP (REPORTED SPEECH) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu gián tiếp dùng để thuật lại lời nói của một người khác mà không cần lặp lại chính xác từng từ của họ.</p>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">5.1. Quy tắc chuyển đổi "3 Sự thay đổi bắt buộc" <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Khi chuyển từ Trực tiếp sang Gián tiếp, học sinh phải thực hiện đủ 3 bước sau:</p>
+            
+            
+
+            <div class="mẹo-box">
+                <b>Bước 1: Đổi Ngôi (Đại từ nhân xưng, tính từ sở hữu)</b>
+                <ul>
+                    <li>Đổi theo người nói và người nghe cho phù hợp ngữ cảnh.</li>
+                </ul>
+                <b>Bước 2: Lùi Thì (Tense Backshift)</b>
+                <ul>
+                    <li>Luôn lùi động từ về quá khứ một bậc so với câu gốc.</li>
+                </ul>
+                <b>Bước 3: Đổi Trạng từ chỉ thời gian và nơi chốn</b>
+                <ul>
+                    <li>Biến những từ "gần" (đây, bây giờ) thành những từ "xa" (đó, lúc đó).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">5.2. Bảng tra cứu quy tắc Lùi thì <span class="arrow">▼</span> </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Câu Trực tiếp</th>
+                        <th>Câu Gián tiếp (Lùi 1 thì)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Hiện tại đơn (V1/s/es)</td><td><b>Quá khứ đơn (V2/ed)</b></td></tr>
+                    <tr><td>Hiện tại tiếp diễn (am/is/are + V-ing)</td><td><b>Quá khứ tiếp diễn (was/were + V-ing)</b></td></tr>
+                    <tr><td>Hiện tại hoàn thành (have/has + V3)</td><td><b>Quá khứ hoàn thành (had + V3)</b></td></tr>
+                    <tr><td>Quá khứ đơn (V2/ed)</td><td><b>Quá khứ hoàn thành (had + V3)</b></td></tr>
+                    <tr><td>Will / Can / May</td><td><b>Would / Could / Might</b></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">5.3. Bảng đổi Trạng từ chỉ Thời gian & Nơi chốn <span class="arrow">▼</span> </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trực tiếp</th>
+                        <th>Gián tiếp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Now</td><td><b>Then / At that time</b></td></tr>
+                    <tr><td>Here</td><td><b>There</b></td></tr>
+                    <tr><td>Today</td><td><b>That day</b></td></tr>
+                    <tr><td>Yesterday</td><td><b>The day before / The previous day</b></td></tr>
+                    <tr><td>Tomorrow</td><td><b>The next day / The following day</b></td></tr>
+                    <tr><td>This / These</td><td><b>That / Those</b></td></tr>
+                    <tr><td>Ago</td><td><b>Before</b></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">5.4. Các dạng câu Gián tiếp phổ biến <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p><b>A. Dạng câu kể (Statement):</b> Dùng "Said that" hoặc "Told someone that".</p>
+            <ul>
+                <li><span class="example">Direct:</span> "I am tired," he said.</li>
+                <li><span class="example">Reported:</span> He said <b>that</b> he <b>was</b> tired.</li>
+            </ul>
+
+            <p><b>B. Dạng câu hỏi (Questions):</b> Dùng "Asked", "Wanted to know".</p>
+            <ul>
+                <li>Câu hỏi Yes/No: Mượn <b>IF</b> hoặc <b>WHETHER</b>.</li>
+                <li>Câu hỏi Wh-: Giữ nguyên từ để hỏi (What, Where, When...).</li>
+                <li>⚠️ <b>Lưu ý:</b> Đưa câu hỏi về dạng khẳng định (không mượn trợ động từ do/does/did).</li>
+            </ul>
+
+            <p><b>C. Dạng câu mệnh lệnh (Requests/Orders):</b> Dùng <b>to V</b> hoặc <b>not to V</b>.</p>
+            <ul>
+                <li><span class="example">Direct:</span> "Don't shout," the teacher said.</li>
+                <li><span class="example">Reported:</span> The teacher told us <b>not to shout</b>.</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">5.5. Mẹo tránh bẫy trong đề thi <span class="arrow">▼</span> </div>
+        <div class="content">
+            <div class="note-box">
+                ⚠️ <b>PHÂN BIỆT SAID VÀ TOLD:</b>
+                <ul>
+                    <li><b>S + SAID + (that) + Mệnh đề.</b> (Không có người nghe trực tiếp phía sau).</li>
+                    <li><b>S + TOLD + Người nghe + (that) + Mệnh đề.</b> (Bắt buộc phải có người nghe như: told me, told him...).</li>
+                </ul>
+            </div>
+            <div class="mẹo-box">
+                💡 <b>KHI NÀO KHÔNG LÙI THÌ?</b> <br>
+                Nếu động từ dẫn ở hiện tại (He <b>says</b>, She <b>tells</b> me...) hoặc lời nói là một <b>sự thật hiển nhiên</b> (Mặt trời mọc ở hướng Đông) -> <b>Giữ nguyên thì</b>, không lùi.
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="header-main collapsed" onclick="toggle(this)">
+        CẤU TRÚC 6: CÂU MỆNH LỆNH & CÂU CẦU KHIẾN <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Câu mệnh lệnh dùng để ra lệnh, yêu cầu hoặc khuyên bảo. Câu cầu khiến dùng khi chúng ta không tự làm một việc mà nhờ hoặc thuê người khác làm.</p>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">6.1. Câu Mệnh lệnh trực tiếp <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Đặc điểm của câu mệnh lệnh là <b>không có chủ ngữ</b> (chủ ngữ ngầm hiểu là "You").</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dạng câu</th>
+                        <th>Công thức</th>
+                        <th>Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Khẳng định</b></td>
+                        <td><b>V-bare + (O)!</b></td>
+                        <td><span class="example">Close the door!</span> (Đóng cửa lại!)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Phủ định</b></td>
+                        <td><b>Don't + V-bare + (O)!</b></td>
+                        <td><span class="example">Don't touch that!</span> (Đừng động vào đó!)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="note-box">
+                💡 <b>Lịch sự hơn:</b> Thêm từ <b>"Please"</b> vào đầu hoặc cuối câu để yêu cầu nhẹ nhàng hơn. <br>
+                <i>Ví dụ: Please sit down. / Sit down, please.</i>
+            </div>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">6.2. Cấu trúc nhờ vả (Cầu khiến) với HAVE và GET <span class="arrow">▼</span> </div>
+        <div class="content">
+            <p>Đây là phần cực kỳ hay thi. Học sinh cần phân biệt dạng <b>Chủ động</b> (nhờ ai làm gì) và <b>Bị động</b> (có cái gì được làm bởi ai).</p>
+            
+            [Image showing the difference between active and passive causative with Have and Get]
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dạng</th>
+                        <th>Cấu trúc với HAVE</th>
+                        <th>Cấu trúc với GET</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Chủ động</b><br>(Nhờ ai đó)</td>
+                        <td><b>S + HAVE + Người + V-bare</b></td>
+                        <td><b>S + GET + Người + TO V-inf</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Bị động</b><br>(Có cái gì được làm)</td>
+                        <td><b>S + HAVE + Vật + V3/ed</b></td>
+                        <td><b>S + GET + Vật + V3/ed</b></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO GHI NHỚ "THẦN CHÚ":</b>
+                <ul>
+                    <li><b>"Have người mẫu (V-bare) - Get người to (To-V)"</b>.</li>
+                    <li>Với <b>Vật</b>, cả Have và Get đều dùng <b>V3/ed</b>.</li>
+                </ul>
+            </div>
+            
+            <p><b>Ví dụ đối chiếu:</b></p>
+            <ul>
+                <li><span class="example">Chủ động:</span> I <b>have</b> the mechanic <b>fix</b> my car. (Tôi nhờ thợ sửa xe).</li>
+                <li><span class="example">Chủ động:</span> I <b>get</b> the mechanic <b>to fix</b> my car.</li>
+                <li><span class="example">Bị động:</span> I <b>have/get</b> my car <b>fixed</b>. (Tôi đi sửa xe - xe được sửa bởi thợ).</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">6.3. Các cấu trúc yêu cầu, sai khiến khác <span class="arrow">▼</span> </div>
+        <div class="content">
+            <ul>
+                <li><b>Make someone do something:</b> Bắt ai đó phải làm gì (ép buộc). <br> <span class="example">My mom <b>makes</b> me <b>clean</b> my room.</span></li>
+                <li><b>Let someone do something:</b> Cho phép ai đó làm gì. <br> <span class="example">Please <b>let</b> me <b>go</b> out.</span></li>
+                <li><b>Help someone (to) do something:</b> Giúp ai làm gì.</li>
+            </ul>
+        </div>
+
+        <div class="header-sub collapsed"  onclick="toggle(this)">6.4. Lưu ý khi làm bài tập viết lại câu <span class="arrow">▼</span> </div>
+        <div class="content">
+            <div class="note-box">
+                ⚠️ <b>BẪY VỀ THÌ:</b> <br>
+                Khi chia động từ trong cấu trúc nhờ vả, động từ <b>Have/Get</b> phải chia theo thì của câu. Động từ chính (V-bare/To-V/V3) luôn giữ đúng dạng theo công thức.
+                <br><i>Ví dụ: Yesterday, I <b>had</b> my hair <b>cut</b>. (Không dùng 'have')</i>
+            </div>
+            <div class="mẹo-box">
+                💡 <b>DẤU HIỆU BỊ ĐỘNG:</b> <br>
+                Nếu sau Have/Get là các danh từ chỉ vật như: <i>hair, house, car, bike, report...</i> -> 99% dùng <b>V3/ed</b>.
+            </div>
+        </div>
+
+
+
+
+
+</div>
+
+<script>
+    function toggle(element) {
+    // Bật/tắt class collapsed để xoay mũi tên
+    element.classList.toggle("collapsed");
+    
+    // Tìm phần nội dung ngay sau tiêu đề
+    var content = element.nextElementSibling;
+    
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
