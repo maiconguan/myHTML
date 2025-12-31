@@ -27,6 +27,40 @@
         .example { color: #d81b60; font-style: italic; font-weight: bold; }
         .arrow { transition: transform 0.3s; }
         .rotate { transform: rotate(180deg); }
+        .btn-study {
+  /* Màu sắc và hình dáng */
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Màu gradient xanh tím trẻ trung */
+  color: white;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px; /* Bo tròn hoàn toàn tạo cảm giác thân thiện */
+  cursor: pointer;
+  margin: 10px 10px;
+  
+  /* Đổ bóng nhẹ tạo độ nổi (3D) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  
+  /* Hiệu ứng chuyển động mượt mà */
+  transition: all 0.3s ease;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+.btn-study:hover {
+  transform: translateY(-3px); /* Nút bay lên nhẹ */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bóng đậm hơn */
+  filter: brightness(1.1); /* Sáng hơn một chút */
+}
+
+/* Hiệu ứng khi click vào (Active) */
+.btn-study:active {
+  transform: translateY(2px); /* Nút lún xuống khi bấm */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
     </style>
 </head>
 <body>
@@ -300,6 +334,358 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="collapse-wrapper">
+    <div class="header-main" onclick="toggle(this)">
+        3. TÍNH TỪ (ADJECTIVES) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Tính từ (Adjective) là những từ dùng để miêu tả đặc điểm, tính chất của người, sự vật hoặc hiện tượng. Tính từ giúp cung cấp thêm chi tiết cho Danh từ.</p>
+        
+        
+
+        <div class="header-sub" onclick="toggle(this)">
+            3.1. Vị trí của Tính từ trong câu <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Trong tiếng Anh, tính từ thường xuất hiện ở 2 vị trí "vàng" sau đây:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vị trí</th>
+                        <th>Cấu trúc & Ví dụ nhấn mạnh</th>
+                        <th>Dịch nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Trước Danh từ</b></td>
+                        <td>Adj + Noun <br><span class="example">A <b>BEAUTIFUL</b> girl.</span></td>
+                        <td>Một cô gái <b>ĐẸP</b>.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sau Động từ nối</b></td>
+                        <td>Linking Verb (be, look, feel...) + Adj <br><span class="example">She is <b>HAPPY</b>.</span></td>
+                        <td>Cô ấy đang <b>HẠNH PHÚC</b>.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note-box">
+                ⚠️ <b>GHI NHỚ:</b> Các động từ nối (Linking Verbs) thường gặp: <b>Be, seem, look, feel, taste, smell, sound, become, get.</b> Phía sau chúng phải là TÍNH TỪ, không phải Trạng từ.
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            3.2. Quy tắc sắp xếp thứ tự Tính từ (OSASCOMP) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Khi có nhiều tính từ cùng miêu tả một danh từ, học sinh phải sắp xếp theo đúng trật tự <b>OSASCOMP</b>:</p>
+            
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ký hiệu</th>
+                        <th>Loại tính từ</th>
+                        <th>Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>O</b> - Opinion</td><td>Ý kiến (đẹp, hay...)</td><td><span class="example">beautiful, lovely</span></td></tr>
+                    <tr><td><b>S</b> - Size</td><td>Kích cỡ</td><td><span class="example">big, small, tall</span></td></tr>
+                    <tr><td><b>A</b> - Age</td><td>Độ tuổi</td><td><span class="example">old, young, new</span></td></tr>
+                    <tr><td><b>S</b> - Shape</td><td>Hình dáng</td><td><span class="example">round, square</span></td></tr>
+                    <tr><td><b>C</b> - Color</td><td>Màu sắc</td><td><span class="example">red, blue, black</span></td></tr>
+                    <tr><td><b>O</b> - Origin</td><td>Nguồn gốc</td><td><span class="example">Vietnamese, Japanese</span></td></tr>
+                    <tr><td><b>M</b> - Material</td><td>Chất liệu</td><td><span class="example">silk, plastic, gold</span></td></tr>
+                    <tr><td><b>P</b> - Purpose</td><td>Mục đích</td><td><span class="example">sleeping (bag), walking</span></td></tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>Ví dụ nhấn mạnh:</b> <br>
+                <span class="example">A <b>BEAUTIFUL</b> (O) <b>LARGE</b> (S) <b>OLD</b> (A) <b>ROUND</b> (S) <b>BROWN</b> (C) table.</span> <br>
+                → Một chiếc bàn <b>TRÒN</b> (S), <b>NÂU</b> (C), <b>CŨ</b> (A), <b>TO</b> (S) và <b>ĐẸP</b> (O).
+            </div>
+            
+            <div class="mẹo-box">
+                💡 <b>MẸO GHI NHỚ:</b> Hãy học thuộc câu thần chú: <b>"Ông Sáu Ăn Súp Cua Ông Mập Phì"</b> để nhớ nhanh thứ tự O-S-A-S-C-O-M-P.
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            3.3. Dấu hiệu nhận biết (Hậu tố tính từ) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Học sinh có thể nhận diện tính từ dựa vào các đuôi (hậu tố) phổ biến sau:</p>
+            <table>
+                <tr>
+                    <th>Đuôi (Suffix)</th>
+                    <th>Ví dụ nhấn mạnh</th>
+                    <th>Dịch nghĩa</th>
+                </tr>
+                <tr><td><b>-ful</b></td><td><span class="example">Care<b>FUL</b></span></td><td>Cẩn thận</td></tr>
+                <tr><td><b>-less</b></td><td><span class="example">Care<b>LESS</b></span></td><td>Bất cẩn</td></tr>
+                <tr><td><b>-ive</b></td><td><span class="example">Act<b>IVE</b></span></td><td>Năng động</td></tr>
+                <tr><td><b>-ous</b></td><td><span class="example">Danger<b>OUS</b></span></td><td>Nguy hiểm</td></tr>
+                <tr><td><b>-able / -ible</b></td><td><span class="example">Eat<b>ABLE</b></span></td><td>Có thể ăn được</td></tr>
+                <tr><td><b>-y</b></td><td><span class="example">Rain<b>Y</b></span></td><td>Có mưa</td></tr>
+            </table>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            3.4. Phân biệt Tính từ đuôi -ED và -ING <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Đây là phần học sinh rất hay nhầm lẫn trong các bài thi trắc nghiệm:</p>
+            <ul>
+                <li><span class="example">Tính từ <b>-ING</b></span>: Dùng để miêu tả <b>tính chất</b> của sự vật/sự việc.</li>
+                <li><span class="example">Tính từ <b>-ED</b></span>: Dùng để miêu tả <b>cảm xúc</b> của con người (bị tác động).</li>
+            </ul>
+
+            <div class="mẹo-box">
+                💡 <b>Ví dụ đối chiếu:</b> <br>
+                - The film is <b>BORING</b>. (Bộ phim thì <b>TẺ NHẠT</b> - Bản chất bộ phim). <br>
+                - I am <b>BORED</b>. (Tôi cảm thấy <b>CHÁN</b> - Cảm xúc của tôi).
+            </div>
+            
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý:</b> Không phải lúc nào người cũng dùng đuôi -ed. Nếu muốn miêu tả anh ấy là một người thú vị (bản chất), ta vẫn dùng: <i>He is an <b>INTERESTING</b> person.</i>
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            3.5. Tính từ sở hữu (Possessive Adjectives) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Tính từ sở hữu dùng để chỉ sự sở hữu của một người hoặc vật đối với một danh từ đứng sau nó. <b>Bắt buộc phải có Danh từ theo sau.</b></p>
+            
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Đại từ nhân xưng</th>
+                        <th>Tính từ sở hữu</th>
+                        <th>Ví dụ nhấn mạnh</th>
+                        <th>Dịch nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>I</td><td><b>My</b></td><td><span class="example"><b>MY</b> book</span></td><td>Cuốn sách <b>CỦA TÔI</b></td></tr>
+                    <tr><td>We</td><td><b>Our</b></td><td><span class="example"><b>OUR</b> house</span></td><td>Ngôi nhà <b>CỦA CHÚNG TÔI</b></td></tr>
+                    <tr><td>You</td><td><b>Your</b></td><td><span class="example"><b>YOUR</b> pen</span></td><td>Chiếc bút <b>CỦA BẠN</b></td></tr>
+                    <tr><td>He</td><td><b>His</b></td><td><span class="example"><b>HIS</b> car</span></td><td>Xe ô tô <b>CỦA ANH ẤY</b></td></tr>
+                    <tr><td>She</td><td><b>Her</b></td><td><span class="example"><b>HER</b> bag</span></td><td>Túi xách <b>CỦA CÔ ẤY</b></td></tr>
+                    <tr><td>It</td><td><b>Its</b></td><td><span class="example"><b>ITS</b> tail</span></td><td>Cái đuôi <b>CỦA NÓ</b></td></tr>
+                    <tr><td>They</td><td><b>Their</b></td><td><span class="example"><b>THEIR</b> school</span></td><td>Trường học <b>CỦA HỌ</b></td></tr>
+                </tbody>
+            </table>
+
+            <div class="note-box">
+                ⚠️ <b>PHÂN BIỆT "TÍNH TỪ SỞ HỮU" VÀ "ĐẠI TỪ SỞ HỮU":</b>
+                <p>Đây là phần học sinh thường xuyên mất điểm. Hãy nhớ quy tắc:</p>
+                <ul>
+                    <li><b>Tính từ sở hữu:</b> PHẢI có Danh từ (Ví dụ: <i>My pen</i>).</li>
+                    <li><b>Đại từ sở hữu:</b> ĐỨNG MỘT MÌNH (Ví dụ: <i>The pen is mine</i>).</li>
+                </ul>
+            </div>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO LÀM BÀI NHANH:</b>
+                <p>Khi gặp bài tập điền từ:</p>
+                <ol>
+                    <li>Nếu thấy phía sau chỗ trống có <b>Danh từ</b> -> Chọn <b>Tính từ sở hữu</b> (my, your, her...).</li>
+                    <li>Nếu phía sau chỗ trống là <b>dấu chấm</b> hoặc <b>không có danh từ</b> -> Chọn <b>Đại từ sở hữu</b> (mine, yours, hers...).</li>
+                </ol>
+            </div>
+
+            <div class="note-box">
+                ⚠️ <b>CẢNH BÁO LỖI SAI:</b> <br>
+                Học sinh rất hay nhầm lẫn giữa <b>ITS</b> (của nó) và <b>IT'S</b> (viết tắt của It is).
+                <br>- <span class="example">The cat licked <b>ITS</b> paw.</span> (Con mèo liếm cái chân <b>CỦA NÓ</b>).
+                <br>- <span class="example"><b>IT'S</b> a cat.</span> (<b>NÓ LÀ</b> một con mèo).
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="collapse-wrapper">
+    <div class="header-main" onclick="toggle(this)">
+        4. ĐỘNG TỪ (VERBS) <span class="arrow">▼</span>
+    </div>
+    <div class="content">
+        <p>Động từ (Verb) là những từ dùng để diễn tả hành động, tình trạng hoặc trạng thái của chủ ngữ. Trong một câu tiếng Anh, động từ là thành phần <b>bắt buộc</b> phải có.</p>
+        
+        
+
+        <div class="header-sub" onclick="toggle(this)">
+            4.1. Động từ chỉ hành động (Action Verbs) & Động từ nối (Linking Verbs) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Học sinh cần phân biệt rõ hai loại này để dùng đúng từ loại đi kèm (Tính từ hay Trạng từ):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loại động từ</th>
+                        <th>Đặc điểm</th>
+                        <th>Ví dụ nhấn mạnh</th>
+                        <th>Dịch nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Action Verbs</b></td>
+                        <td>Diễn tả hành động cụ thể</td>
+                        <td><span class="example">He <b>RUNS</b> quickly.</span></td>
+                        <td>Anh ấy <b>CHẠY</b> nhanh.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Linking Verbs</b></td>
+                        <td>Nối chủ ngữ với tính chất</td>
+                        <td><span class="example">The soup <b>TASTES</b> good.</span></td>
+                        <td>Món súp <b>CÓ VỊ</b> ngon.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO PHÂN BIỆT NHANH:</b> <br>
+                Hãy thử thay động từ đó bằng động từ <b>"TO BE" (am/is/are)</b>:
+                <ul>
+                    <li>Nếu câu vẫn có nghĩa -> Đó là <b>Linking Verb</b> (Ví dụ: <i>The soup <b>is</b> good</i> -> Đúng).</li>
+                    <li>Nếu câu vô nghĩa -> Đó là <b>Action Verb</b> (Ví dụ: <i>He <b>is</b> quickly</i> -> Sai).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            4.2. Trợ động từ (Auxiliary Verbs) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Trợ động từ không mang nghĩa chính nhưng giúp hình thành các thì, câu phủ định và câu nghi vấn.</p>
+            <table>
+                <tr>
+                    <th>Trợ động từ</th>
+                    <th>Cách dùng phổ biến</th>
+                    <th>Ví dụ nhấn mạnh</th>
+                </tr>
+                <tr>
+                    <td><b>DO / DOES / DID</b></td>
+                    <td>Dùng trong câu hỏi/phủ định thì đơn</td>
+                    <td><span class="example"><b>DO</b> you <b>LIKE</b> pizza?</span> <br> (Bạn <b>CÓ THÍCH</b> pizza không?)</td>
+                </tr>
+                <tr>
+                    <td><b>HAVE / HAS / HAD</b></td>
+                    <td>Dùng trong các thì Hoàn thành</td>
+                    <td><span class="example">I <b>HAVE FINISHED</b> it.</span> <br> (Tôi <b>ĐÃ HOÀN THÀNH</b> nó rồi.)</td>
+                </tr>
+                <tr>
+                    <td><b>AM / IS / ARE</b></td>
+                    <td>Dùng trong các thì Tiếp diễn</td>
+                    <td><span class="example">They <b>ARE SINGING</b>.</span> <br> (Họ <b>ĐANG HÁT</b>.)</td>
+                </tr>
+            </table>
+            
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý:</b> Khi đã dùng trợ động từ <i>Do/Does/Did</i> trong câu hỏi hoặc phủ định, động từ chính phải đưa về <b>DẠNG NGUYÊN THỂ</b> (không thêm s/es/ed).
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            4.3. Động từ khuyết thiếu (Modal Verbs) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Dùng để diễn tả khả năng, sự cho phép, lời khuyên hoặc nghĩa vụ.</p>
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Động từ khuyết thiếu</th>
+                        <th>Ý nghĩa / Cách dùng</th>
+                        <th>Ví dụ song ngữ nhấn mạnh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>CAN / COULD</b></td><td>Khả năng</td><td><span class="example">I <b>CAN SWIM</b>.</span> (Tôi <b>CÓ THỂ BƠI</b>.)</td></tr>
+                    <tr><td><b>MUST</b></td><td>Bắt buộc</td><td><span class="example">You <b>MUST GO</b>.</span> (Bạn <b>PHẢI ĐI</b>.)</td></tr>
+                    <tr><td><b>SHOULD</b></td><td>Lời khuyên</td><td><span class="example">You <b>SHOULD EAT</b>.</span> (Bạn <b>NÊN ĂN</b>.)</td></tr>
+                    <tr><td><b>MAY / MIGHT</b></td><td>Xin phép/Có lẽ</td><td><span class="example"><b>MAY</b> I <b>COME</b> in?</span> (Tôi <b>CÓ THỂ VÀO</b> không?)</td></tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>QUY TẮC "BẤT DI BẤT DỊCH":</b> <br>
+                Sau Động từ khuyết thiếu (Can, Must, Should...), động từ chính luôn ở dạng <b>NGUYÊN THỂ KHÔNG "TO"</b>. <br>
+                <i>(Sai: <s>Can to swim</s>, <s>Must goes</s> - Đúng: <b>Can swim</b>, <b>Must go</b>)</i>.
+            </div>
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            4.4. Động từ bất quy tắc (Irregular Verbs) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Học sinh cần ghi nhớ 3 cột của động từ khi chia thì Quá khứ đơn (V2) và Hoàn thành (V3).</p>
+            
+
+            <a href="https://sites.google.com/view/gochoctap-sunny-rainy/th%C6%B0-vi%E1%BB%87n/b%E1%BA%A3ng-%C4%91%E1%BB%99ng-t%E1%BB%AB-b%E1%BA%A5t-qui-t%E1%BA%AFc?authuser=0" target="_parent" style="text-decoration: none;">
+              <button class="btn-study">👉👉👉 Bảng động từ bất qui tắc</button>
+            </a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>V1 (Nguyên thể)</th>
+                        <th>V2 (Quá khứ đơn)</th>
+                        <th>V3 (Quá khứ phân từ)</th>
+                        <th>Nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>Go</b></td><td><b>Went</b></td><td><b>Gone</b></td><td>Đi</td></tr>
+                    <tr><td><b>Eat</b></td><td><b>Ate</b></td><td><b>Eaten</b></td><td>Ăn</td></tr>
+                    <tr><td><b>See</b></td><td><b>Saw</b></td><td><b>Seen</b></td><td>Nhìn</td></tr>
+                    <tr><td><b>Buy</b></td><td><b>Bought</b></td><td><b>Bought</b></td><td>Mua</td></tr>
+                </tbody>
+            </table>
+
+            <div class="mẹo-box">
+                💡 <b>MẸO GHI NHỚ:</b> <br>
+                Học theo nhóm âm điệu sẽ nhanh hơn: <br>
+                - Nhóm I - A - U: <i>S<b>i</b>ng - S<b>a</b>ng - S<b>u</b>ng</i>, <i>Dr<b>i</b>nk - Dr<b>a</b>nk - Dr<b>u</b>nk</i>. <br>
+                - Nhóm giữ nguyên 3 cột: <i>Cut - Cut - Cut</i>, <i>Put - Put - Put</i>.
+            </div>
+
+            
+
+        </div>
+
+        <div class="header-sub" onclick="toggle(this)">
+            4.5. Nội động từ (Intransitive) & Ngoại động từ (Transitive) <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+            <p>Đây là kiến thức quan trọng để học về Câu bị động (Passive Voice) sau này.</p>
+            <ul>
+                <li><b>Ngoại động từ:</b> Cần có tân ngữ (người/vật) đi sau để hoàn thành nghĩa. <br> <span class="example">I <b>BUY</b> a <b>BOOK</b>.</span> (Tôi <b>MUA</b> một <b>QUYỂN SÁCH</b>).</li>
+                <li><b>Nội động từ:</b> Tự bản thân nó đã đủ nghĩa, không cần tân ngữ. <br> <span class="example">She <b>SLEEPS</b>.</span> (Cô ấy <b>NGỦ</b>).</li>
+            </ul>
+            <div class="note-box">
+                ⚠️ <b>LƯU Ý:</b> Chỉ có <b>Ngoại động từ</b> mới có thể chuyển sang câu Bị động. (Ví dụ: <i>A book was bought</i>).
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 
