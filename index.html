@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục Tài Liệu Học Tập 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <style>
+        body { background-color: #f8fafc; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-12 px-4">
+
+    <!-- Header -->
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-black text-slate-800 mb-2">Hệ Thống Tài Liệu</h1>
+        <p class="text-slate-500">Chọn một chuyên mục để bắt đầu học tập</p>
+    </header>
+
+    <!-- Grid Danh sách các trang -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
+        
+        <!-- Mục: Từ loại Tiếng Anh -->
+        <a href="tuloaiEnglish.html" class="card-hover bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div class="bg-blue-100 text-blue-600 p-4 rounded-xl">
+                <i class="fa-solid fa-language fa-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-slate-800">Từ loại Tiếng Anh</h2>
+                <p class="text-xs text-slate-400">Danh từ, động từ, tính từ...</p>
+            </div>
+        </a>
+
+        <!-- Mục: Toán 8 -->
+        <a href="toan8.html" class="card-hover bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div class="bg-orange-100 text-orange-600 p-4 rounded-xl">
+                <i class="fa-solid fa-calculator fa-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-slate-800">Toán Lớp 8</h2>
+                <p class="text-xs text-slate-400">Đại số và Hình học lớp 8</p>
+            </div>
+        </a>
+
+        <!-- Mục: Cấu trúc câu -->
+        <a href="cautruccau.html" class="card-hover bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div class="bg-purple-100 text-purple-600 p-4 rounded-xl">
+                <i class="fa-solid fa-code-branch fa-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-slate-800">Cấu trúc câu</h2>
+                <p class="text-xs text-slate-400">Các mẫu câu phổ biến</p>
+            </div>
+        </a>
+
+        <!-- Mục: 360 Động từ bất quy tắc -->
+        <a href="360irregularverds.html" class="card-hover bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div class="bg-emerald-100 text-emerald-600 p-4 rounded-xl">
+                <i class="fa-solid fa-list-check fa-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-slate-800">360 Động từ BQT</h2>
+                <p class="text-xs text-slate-400">Bảng tra cứu đầy đủ</p>
+            </div>
+        </a>
+
+        <!-- Mục: 12 Thì -->
+        <a href="12tenses.html" class="card-hover bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+            <div class="bg-pink-100 text-pink-600 p-4 rounded-xl">
+                <i class="fa-solid fa-clock fa-xl"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-slate-800">12 Thì Tiếng Anh</h2>
+                <p class="text-xs text-slate-400">Hệ thống ngữ pháp thời gian</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 text-slate-400 text-sm">
+        &copy; 2026 Hệ thống tài liệu tĩnh. Deploy on GitHub Pages.
+    </footer>
+
+</body>
+</html>
